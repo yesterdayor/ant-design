@@ -18,3 +18,20 @@ Route::get('/', function () {
 });
 
 Route::get('index', [\App\Http\Controllers\UserController::class, 'index']);
+
+Route::prefix('study')->name('study')->group(function () {
+    Route::get('index', function () {
+       return view('study.index', ['name' => '邓志秋', 'record' => [],
+           'errCode' => 200,
+           'jobs'    => ['22', '33', '44', '55', '34343'],
+           'array'   => ['age' => 23, 'sex' => '男']]);
+    });
+});
+
+Route::get('tasks', function (){
+   return view('tasks', ['tasks' => [1,2,3,5,6,7], 'title' => '哇哇哇']);
+});
+
+Route::get('child', function (){
+   return view('child');
+});
