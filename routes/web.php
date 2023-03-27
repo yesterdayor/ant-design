@@ -35,3 +35,12 @@ Route::get('tasks', function (){
 Route::get('child', function (){
    return view('child');
 });
+
+
+Route::get('counter', \App\Http\Livewire\Counter::class );
+Route::get('hello_world', \App\Http\Livewire\HelloWorld::class);
+
+Route::get('verbatim', function () {
+   return view('home');
+});
+Route::get('post', \App\Http\Livewire\ShowPosts::class);

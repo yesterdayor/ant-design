@@ -8,5 +8,7 @@
 @endsection
 
 @section('content')
-    <p>This is my body content</p>
+    <p>This is my body content</pz>
+
+
 @endsection
